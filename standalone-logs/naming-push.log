@@ -1,0 +1,77 @@
+2022-07-06 01:17:09,334 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=2}
+
+2022-07-06 01:17:09,871 INFO [PUSH-SUCC] 48ms, all delay time 582ms, SLA 583ms, Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=2}, DataSize=1, target=192.168.3.16
+
+2022-07-06 01:17:14,825 ERROR [PUSH-FAIL] 5001ms, Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=3}, reason=Timeout After 5000 milliseconds,requestId =3, target=192.168.3.16
+
+2022-07-06 01:17:14,827 ERROR Reason detail: 
+
+java.util.concurrent.TimeoutException: Timeout After 5000 milliseconds,requestId =3
+	at com.alibaba.nacos.api.remote.DefaultRequestFuture$TimeoutHandler.run(DefaultRequestFuture.java:194)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-06 01:17:15,424 ERROR [PUSH-FAIL] 5000ms, Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=3}, reason=Timeout After 5000 milliseconds,requestId =4, target=192.168.3.16
+
+2022-07-06 01:17:15,425 ERROR Reason detail: 
+
+java.util.concurrent.TimeoutException: Timeout After 5000 milliseconds,requestId =4
+	at com.alibaba.nacos.api.remote.DefaultRequestFuture$TimeoutHandler.run(DefaultRequestFuture.java:194)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-06 01:17:15,425 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=3}
+
+2022-07-06 01:17:20,831 ERROR [PUSH-FAIL] 5001ms, Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=3}, reason=Timeout After 5000 milliseconds,requestId =5, target=192.168.3.16
+
+2022-07-06 01:17:20,831 ERROR Reason detail: 
+
+java.util.concurrent.TimeoutException: Timeout After 5000 milliseconds,requestId =5
+	at com.alibaba.nacos.api.remote.DefaultRequestFuture$TimeoutHandler.run(DefaultRequestFuture.java:194)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-06 01:17:26,838 ERROR [PUSH-FAIL] 5001ms, Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=3}, reason=Timeout After 5000 milliseconds,requestId =7, target=192.168.3.16
+
+2022-07-06 01:17:26,839 ERROR Reason detail: 
+
+java.util.concurrent.TimeoutException: Timeout After 5000 milliseconds,requestId =7
+	at com.alibaba.nacos.api.remote.DefaultRequestFuture$TimeoutHandler.run(DefaultRequestFuture.java:194)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-06 01:17:32,845 ERROR [PUSH-FAIL] 5000ms, Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=3}, reason=Timeout After 5000 milliseconds,requestId =8, target=192.168.3.16
+
+2022-07-06 01:17:32,846 ERROR Reason detail: 
+
+java.util.concurrent.TimeoutException: Timeout After 5000 milliseconds,requestId =8
+	at com.alibaba.nacos.api.remote.DefaultRequestFuture$TimeoutHandler.run(DefaultRequestFuture.java:194)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-06 01:17:33,299 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=4}
+
+2022-07-06 01:17:51,527 INFO [PUSH] Task merge for Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=5}
+
+2022-07-06 01:17:52,118 INFO [PUSH-SUCC] 46ms, all delay time 637ms, SLA 637ms, Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=5}, DataSize=1, target=192.168.3.16
+

@@ -1,0 +1,432 @@
+2022-07-05 22:27:39,217 WARN naming.distro config will be removed, please use core.protocol.distro replace.
+
+2022-07-05 22:27:39,217 WARN Using naming.distro config to replace core.distro config
+
+2022-07-05 22:27:39,452 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2022-07-05 22:27:39,453 INFO listen for service meta change
+
+2022-07-05 22:27:39,458 INFO upgrade.state file is not exist
+
+2022-07-05 22:27:44,645 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2022-07-05 22:27:44,645 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2022-07-05 22:27:44,647 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2022-07-05 22:27:44,647 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2022-07-05 22:27:46,392 INFO Load instance extension handler []
+
+2022-07-05 22:27:51,123 INFO Client connection 1657031270926_219.136.72.89_9130 connect
+
+2022-07-05 22:27:51,474 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=0}, 1657031270926_219.136.72.89_9130
+
+2022-07-05 22:28:36,777 WARN [NamingServerHttpClientManager] Start destroying HTTP-Client
+
+2022-07-05 22:28:36,814 WARN [NamingServerHttpClientManager] Destruction of the end
+
+2022-07-05 22:28:36,841 INFO Client connection 1657031271041_219.136.72.89_9131 disconnect, remove instances and subscribers
+
+2022-07-05 22:28:36,845 INFO Client connection 1657031270926_219.136.72.89_9130 disconnect, remove instances and subscribers
+
+2022-07-05 22:28:38,014 ERROR [HEALTH-CHECK] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.processTask(TcpSuperSenseProcessor.java:137)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.run(TcpSuperSenseProcessor.java:154)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:28:38,014 ERROR [HEALTH-CHECK-V2] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.processTask(TcpHealthCheckProcessor.java:122)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.run(TcpHealthCheckProcessor.java:139)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:29:22,965 WARN naming.distro config will be removed, please use core.protocol.distro replace.
+
+2022-07-05 22:29:22,966 WARN Using naming.distro config to replace core.distro config
+
+2022-07-05 22:29:23,135 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2022-07-05 22:29:23,136 INFO listen for service meta change
+
+2022-07-05 22:29:26,681 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2022-07-05 22:29:26,681 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2022-07-05 22:29:26,681 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2022-07-05 22:29:26,681 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2022-07-05 22:29:28,239 INFO Load instance extension handler []
+
+2022-07-05 22:29:31,298 INFO Client connection 1657031371155_219.136.72.89_9335 connect
+
+2022-07-05 22:29:33,809 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=0}, 1657031371155_219.136.72.89_9335
+
+2022-07-05 22:30:30,148 WARN [NamingServerHttpClientManager] Start destroying HTTP-Client
+
+2022-07-05 22:30:30,162 WARN [NamingServerHttpClientManager] Destruction of the end
+
+2022-07-05 22:30:30,196 INFO Client connection 1657031371155_219.136.72.89_9335 disconnect, remove instances and subscribers
+
+2022-07-05 22:30:30,198 INFO Client connection 1657031371165_219.136.72.89_9336 disconnect, remove instances and subscribers
+
+2022-07-05 22:30:30,762 ERROR [HEALTH-CHECK-V2] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.processTask(TcpHealthCheckProcessor.java:122)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.run(TcpHealthCheckProcessor.java:139)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:30:30,762 ERROR [HEALTH-CHECK] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.processTask(TcpSuperSenseProcessor.java:137)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.run(TcpSuperSenseProcessor.java:154)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:31:07,626 WARN naming.distro config will be removed, please use core.protocol.distro replace.
+
+2022-07-05 22:31:07,627 WARN Using naming.distro config to replace core.distro config
+
+2022-07-05 22:31:08,230 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2022-07-05 22:31:08,239 INFO listen for service meta change
+
+2022-07-05 22:31:08,247 INFO upgrade.state file is not exist
+
+2022-07-05 22:31:14,106 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2022-07-05 22:31:14,108 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2022-07-05 22:31:14,110 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2022-07-05 22:31:14,111 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2022-07-05 22:31:15,875 INFO Load instance extension handler []
+
+2022-07-05 22:31:18,511 INFO Client connection 1657031478350_219.136.72.89_9503 connect
+
+2022-07-05 22:31:19,204 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=0}, 1657031478350_219.136.72.89_9503
+
+2022-07-05 22:42:31,919 WARN [NamingServerHttpClientManager] Start destroying HTTP-Client
+
+2022-07-05 22:42:31,948 WARN [NamingServerHttpClientManager] Destruction of the end
+
+2022-07-05 22:42:31,965 INFO Client connection 1657031478350_219.136.72.89_9503 disconnect, remove instances and subscribers
+
+2022-07-05 22:42:31,969 INFO Client connection 1657031478384_219.136.72.89_9504 disconnect, remove instances and subscribers
+
+2022-07-05 22:42:32,839 ERROR [HEALTH-CHECK-V2] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.processTask(TcpHealthCheckProcessor.java:122)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.run(TcpHealthCheckProcessor.java:139)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:42:32,839 ERROR [HEALTH-CHECK] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.processTask(TcpSuperSenseProcessor.java:137)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.run(TcpSuperSenseProcessor.java:154)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:43:28,286 WARN naming.distro config will be removed, please use core.protocol.distro replace.
+
+2022-07-05 22:43:28,286 WARN Using naming.distro config to replace core.distro config
+
+2022-07-05 22:43:28,456 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2022-07-05 22:43:28,457 INFO listen for service meta change
+
+2022-07-05 22:43:28,465 INFO upgrade.state file is not exist
+
+2022-07-05 22:43:33,330 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2022-07-05 22:43:33,330 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2022-07-05 22:43:33,331 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2022-07-05 22:43:33,332 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2022-07-05 22:43:34,817 INFO Load instance extension handler []
+
+2022-07-05 22:43:38,334 INFO Client connection 1657032218250_219.136.72.89_10244 connect
+
+2022-07-05 22:43:38,961 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=0}, 1657032218250_219.136.72.89_10244
+
+2022-07-05 22:45:29,301 WARN [NamingServerHttpClientManager] Start destroying HTTP-Client
+
+2022-07-05 22:45:29,311 WARN [NamingServerHttpClientManager] Destruction of the end
+
+2022-07-05 22:45:29,334 INFO Client connection 1657032217027_219.136.72.89_10243 disconnect, remove instances and subscribers
+
+2022-07-05 22:45:29,339 INFO Client connection 1657032218250_219.136.72.89_10244 disconnect, remove instances and subscribers
+
+2022-07-05 22:45:30,224 ERROR [HEALTH-CHECK-V2] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.processTask(TcpHealthCheckProcessor.java:122)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.run(TcpHealthCheckProcessor.java:139)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:45:30,224 ERROR [HEALTH-CHECK] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.processTask(TcpSuperSenseProcessor.java:137)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.run(TcpSuperSenseProcessor.java:154)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:47:23,841 WARN naming.distro config will be removed, please use core.protocol.distro replace.
+
+2022-07-05 22:47:23,851 WARN Using naming.distro config to replace core.distro config
+
+2022-07-05 22:47:24,218 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2022-07-05 22:47:24,220 INFO listen for service meta change
+
+2022-07-05 22:47:28,456 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2022-07-05 22:47:28,456 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2022-07-05 22:47:28,457 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2022-07-05 22:47:28,457 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2022-07-05 22:47:30,080 INFO Load instance extension handler []
+
+2022-07-05 22:47:32,415 INFO Client connection 1657032452270_219.136.72.89_10457 connect
+
+2022-07-05 22:47:32,657 INFO Client connection 1657032452547_219.136.72.89_10458 connect
+
+2022-07-05 22:47:32,796 INFO Client connection 1657032452270_219.136.72.89_10457 disconnect, remove instances and subscribers
+
+2022-07-05 22:47:33,680 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=0}, 1657032452547_219.136.72.89_10458
+
+2022-07-05 22:49:11,511 WARN [NamingServerHttpClientManager] Start destroying HTTP-Client
+
+2022-07-05 22:49:11,523 WARN [NamingServerHttpClientManager] Destruction of the end
+
+2022-07-05 22:49:11,533 INFO Client connection 1657032454600_219.136.72.89_10459 disconnect, remove instances and subscribers
+
+2022-07-05 22:49:11,539 INFO Client connection 1657032452547_219.136.72.89_10458 disconnect, remove instances and subscribers
+
+2022-07-05 22:49:11,813 ERROR [HEALTH-CHECK] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.processTask(TcpSuperSenseProcessor.java:137)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.run(TcpSuperSenseProcessor.java:154)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:49:11,813 ERROR [HEALTH-CHECK-V2] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.processTask(TcpHealthCheckProcessor.java:122)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.run(TcpHealthCheckProcessor.java:139)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:50:09,786 WARN naming.distro config will be removed, please use core.protocol.distro replace.
+
+2022-07-05 22:50:09,786 WARN Using naming.distro config to replace core.distro config
+
+2022-07-05 22:50:09,953 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2022-07-05 22:50:09,956 INFO listen for service meta change
+
+2022-07-05 22:50:09,962 INFO upgrade.state file is not exist
+
+2022-07-05 22:50:14,800 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2022-07-05 22:50:14,800 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2022-07-05 22:50:14,801 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2022-07-05 22:50:14,801 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2022-07-05 22:50:16,271 INFO Load instance extension handler []
+
+2022-07-05 22:50:17,918 INFO Client connection 1657032617765_219.136.72.89_10598 connect
+
+2022-07-05 22:50:19,198 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=0}, 1657032617765_219.136.72.89_10598
+
+2022-07-05 22:51:59,350 INFO Client connection 1657032617765_219.136.72.89_10598 disconnect, remove instances and subscribers
+
+2022-07-05 22:51:59,354 INFO Client connection 1657032617775_219.136.72.89_10599 disconnect, remove instances and subscribers
+
+2022-07-05 22:51:59,358 WARN [NamingServerHttpClientManager] Start destroying HTTP-Client
+
+2022-07-05 22:51:59,391 WARN [NamingServerHttpClientManager] Destruction of the end
+
+2022-07-05 22:52:00,280 ERROR [HEALTH-CHECK] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.processTask(TcpSuperSenseProcessor.java:137)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.run(TcpSuperSenseProcessor.java:154)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:52:00,280 ERROR [HEALTH-CHECK-V2] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.processTask(TcpHealthCheckProcessor.java:122)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.run(TcpHealthCheckProcessor.java:139)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:53:35,167 WARN naming.distro config will be removed, please use core.protocol.distro replace.
+
+2022-07-05 22:53:35,167 WARN Using naming.distro config to replace core.distro config
+
+2022-07-05 22:53:35,343 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2022-07-05 22:53:35,344 INFO listen for service meta change
+
+2022-07-05 22:53:35,351 INFO upgrade.state file is not exist
+
+2022-07-05 22:53:40,324 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2022-07-05 22:53:40,324 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2022-07-05 22:53:40,325 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2022-07-05 22:53:40,325 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2022-07-05 22:53:41,862 INFO Load instance extension handler []
+
+2022-07-05 22:53:44,202 INFO Client connection 1657032824050_219.136.72.89_10728 connect
+
+2022-07-05 22:53:46,822 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=0}, 1657032824050_219.136.72.89_10728
+
+2022-07-05 22:59:13,263 WARN [NamingServerHttpClientManager] Start destroying HTTP-Client
+
+2022-07-05 22:59:13,319 WARN [NamingServerHttpClientManager] Destruction of the end
+
+2022-07-05 22:59:13,325 INFO Client connection 1657032824050_219.136.72.89_10728 disconnect, remove instances and subscribers
+
+2022-07-05 22:59:13,329 INFO Client connection 1657032824061_219.136.72.89_10729 disconnect, remove instances and subscribers
+
+2022-07-05 22:59:13,625 ERROR [HEALTH-CHECK] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.processTask(TcpSuperSenseProcessor.java:137)
+	at com.alibaba.nacos.naming.healthcheck.TcpSuperSenseProcessor.run(TcpSuperSenseProcessor.java:154)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:59:13,625 ERROR [HEALTH-CHECK-V2] error while processing NIO task
+
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.processTask(TcpHealthCheckProcessor.java:122)
+	at com.alibaba.nacos.naming.healthcheck.v2.processor.TcpHealthCheckProcessor.run(TcpHealthCheckProcessor.java:139)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-05 22:59:55,580 WARN naming.distro config will be removed, please use core.protocol.distro replace.
+
+2022-07-05 22:59:55,580 WARN Using naming.distro config to replace core.distro config
+
+2022-07-05 22:59:55,878 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2022-07-05 22:59:55,894 INFO listen for service meta change
+
+2022-07-05 22:59:55,905 INFO upgrade.state file is not exist
+
+2022-07-05 23:00:03,487 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2022-07-05 23:00:03,488 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2022-07-05 23:00:03,489 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2022-07-05 23:00:03,489 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2022-07-05 23:00:06,363 INFO Load instance extension handler []
+
+2022-07-05 23:00:12,481 INFO Client connection 1657033211978_219.136.72.89_10967 connect
+
+2022-07-05 23:00:12,715 INFO Client connection 1657033212022_219.136.72.89_10968 disconnect, remove instances and subscribers
+
+2022-07-05 23:00:14,838 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='gulimall-search', ephemeral=true, revision=0}, 1657033211978_219.136.72.89_10967
+

@@ -1,0 +1,178 @@
+version: "3"
+services:
+  nginx:
+    container_name: nginx
+    build:
+      context: nginx
+      args:
+        NGINX_VERSION: ${NGINX_VERSION}
+        ALPINE_REPOSITORIES: ${ALPINE_REPOSITORIES}
+    ports:
+      - "${NGINX_HTTP_HOST_PORT}:8089"
+      - "${NGINX_HTTPS_HOST_PORT}:443"
+    volumes:
+      - ${CODE_PATH}:/var/www/html/:rw
+      - ${CONF_PATH}/nginx/conf/conf.d:/etc/nginx/conf.d:rw
+      - ${CONF_PATH}/nginx/conf/vhost:/etc/nginx/vhost:rw
+      - ${CONF_PATH}/nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ${LOG_PATH}/nginx:/var/log/nginx/:rw
+    stdin_open: true
+    tty: true
+    restart: always
+    networks:
+      - dcnmp
+
+  mysql:
+    container_name: mysql
+    build:
+      context: mysql
+      args:
+        MYSQL_VERSION: ${MYSQL_VERSION}
+    ports:
+      - "${MYSQL_HOST_PORT}:3306"
+    volumes:
+      - ${CONF_PATH}/mysql/conf/mysql.cnf:/etc/mysql/conf.d/mysql.cnf:rw
+      - ${DATA_PATH}/mysql:/var/lib/mysql:rw
+      - ${LOG_PATH}/mysql:/var/log/mysql:rw
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+    networks:
+      - dcnmp
+
+  redis:
+    container_name: redis
+    build:
+      context: redis
+      args:
+        REDIS_VERSION: ${REDIS_VERSION}
+        ALPINE_REPOSITORIES: ${ALPINE_REPOSITORIES}
+    ports:
+      - "${REDIS_HOST_PORT}:6379"
+    volumes:
+      - ${CONF_PATH}/redis/conf/redis.conf:/etc/redis.conf:rw
+      - ${DATA_PATH}/redis:/data:rw
+    restart: always
+    stdin_open: true
+    tty: true
+    entrypoint: ["redis-server", "/etc/redis.conf"]
+    networks:
+      - dcnmp
+
+  elasticsearch:
+    container_name: elasticsearch
+    build:
+      context: elasticsearch/
+      args:
+        ELASTIC_VERSION: ${ELASTIC_VERSION}
+    volumes:
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
+      - ./elasticsearch/data:/usr/share/elasticsearch/data:z
+      - ./elasticsearch/plugins:/usr/share/elasticsearch/plugins:z
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: -Xms256m -Xmx256m
+      discovery.type: single-node
+    networks:
+      - dcnmp
+
+  kibana:
+    container_name: kibana
+    build:
+      context: kibana/
+      args:
+        ELASTIC_VERSION: ${ELASTIC_VERSION}
+    volumes:
+      - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro,Z
+    ports:
+      - "5601:5601"
+    networks:
+      - dcnmp
+    depends_on:
+      - elasticsearch
+
+  # logstash:
+  #   build:
+  #     context: logstash/
+  #     args:
+  #       ELASTIC_VERSION: ${ELASTIC_VERSION}
+  #   volumes:
+  #     - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro,Z
+  #     - ./logstash/pipeline:/usr/share/logstash/pipeline:ro,Z
+  #   ports:
+  #     - "5044:5044"
+  #     - "5000:5000/tcp"
+  #     - "5000:5000/udp"
+  #     - "9600:9600"
+  #   environment:
+  #     LS_JAVA_OPTS: -Xms256m -Xmx256m
+  #     LOGSTASH_INTERNAL_PASSWORD: ${LOGSTASH_INTERNAL_PASSWORD:-}
+  #   networks:
+  #     - elk
+  #   depends_on:
+  #     - elasticsearch
+
+
+  nacos:
+    image: nacos/nacos-server:${NACOS_VERSION}
+    container_name: nacos-standalone
+    environment:
+    - PREFER_HOST_MODE=hostname
+    - MODE=standalone
+    volumes:
+    # - ./standalone-logs/:/home/nacos/logs
+    # - ./init.d/custom.properties:/home/nacos/init.d/custom.properties
+    - /app/webapp/logs/nacos/standalone-logs/:/home/nacos/logs
+    - /app/webapp/init.d/custom.properties:/home/nacos/init.d/custom.properties
+    - /app/webapp/nacos/conf/:/home/nacos/conf
+    ports:
+    - "8848:8848"
+    - "9848:9848"
+    networks:
+      - dcnmp
+
+
+  rabbitmq:
+    container_name: dcnmp_rabbitmq
+    build:
+      context: rabbitmq
+      args:
+        RABBITMQ_VERSION: ${RABBITMQ_VERSION}
+    ports:
+      - "${RABBITMQ_HOST_PORT_C}:5672"
+      - "${RABBITMQ_HOST_PORT_S}:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: "${RABBITMQ_DEFAULT_USER}"
+      RABBITMQ_DEFAULT_PASS: "${RABBITMQ_DEFAULT_PASS}"
+      TZ: "${TZ}"
+    volumes:
+      - ${LOG_PATH}/rabbitmq:/var/log/rabbitmq:rw
+      - ${DATA_PATH}/rabbitmq:/var/lib/rabbitmq:rw
+
+    stdin_open: true
+    tty: true
+    restart: always
+    networks:
+      - dcnmp
+
+  # prometheus:
+  #   container_name: prometheus
+  #   image: prom/prometheus:latest
+  #   volumes:
+  #     - ./prometheus/prometheus-standalone.yaml:/etc/prometheus/prometheus.yml
+  #   ports:
+  #     - "9090:9090"
+  #   depends_on:
+  #     - nacos
+  #   restart: on-failure
+  # grafana:
+  #   container_name: grafana
+  #   image: grafana/grafana:latest
+  #   ports:
+  #     - 3000:3000
+  #   restart: on-failure
+
+networks:
+  dcnmp:

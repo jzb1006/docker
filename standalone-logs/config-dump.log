@@ -1,0 +1,20 @@
+2022-07-05 23:02:34,054 INFO [dump-task] add task. groupKey=gulimall-coupon.properties+dev, taskKey=gulimall-coupon.properties+dev++false+null
+
+2022-07-05 23:02:34,054 INFO [dump-task] add task. groupKey=gulimall-coupon.properties+prod, taskKey=gulimall-coupon.properties+prod++false+null
+
+2022-07-05 23:02:34,056 INFO [dump-task] add task. groupKey=datasource.yml+dev, taskKey=datasource.yml+dev++false+null
+
+2022-07-05 23:02:34,057 INFO [dump-task] add task. groupKey=mybatis.yml+dev, taskKey=mybatis.yml+dev++false+null
+
+2022-07-05 23:02:34,057 INFO [dump-task] add task. groupKey=other.yml+dev, taskKey=other.yml+dev++false+null
+
+2022-07-05 23:02:41,925 INFO [dump-task] add task. groupKey=gulimall-coupon.properties+dev, taskKey=gulimall-coupon.properties+dev++false+null
+
+2022-07-05 23:02:41,929 INFO [dump-task] add task. groupKey=gulimall-coupon.properties+prod, taskKey=gulimall-coupon.properties+prod++false+null
+
+2022-07-05 23:02:41,931 INFO [dump-task] add task. groupKey=mybatis.yml+dev, taskKey=mybatis.yml+dev++false+null
+
+2022-07-05 23:02:41,929 INFO [dump-task] add task. groupKey=datasource.yml+dev, taskKey=datasource.yml+dev++false+null
+
+2022-07-05 23:02:41,931 INFO [dump-task] add task. groupKey=other.yml+dev, taskKey=other.yml+dev++false+null
+
