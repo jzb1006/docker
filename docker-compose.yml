@@ -31,9 +31,9 @@ services:
     ports:
       - "${MYSQL_HOST_PORT}:3306"
     volumes:
-      - ${CONF_PATH}/mysql/:/etc/mysql/conf.d/mysql.cnf:rw
-      - ${DATA_PATH}/mysql/:/var/lib/mysql:rw
-      - ${LOG_PATH}/mysql/:/var/log/mysql:rw
+      - ${CONF_PATH}/mysql/conf/mysql.cnf:/etc/mysql/conf.d/mysql.cnf:rw
+      - ${DATA_PATH}/mysql:/var/lib/mysql:rw
+      - ${LOG_PATH}/mysql:/var/log/mysql:rw
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
@@ -66,7 +66,7 @@ services:
       args:
         ELASTIC_VERSION: ${ELASTIC_VERSION}
     volumes:
-      - ${CONF_PATH}/elasticsearch/:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
+      - ${CONF_PATH}/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
       - ${DATA_PATH}/elasticsearch/:/usr/share/elasticsearch/data:z
       - ${CONF_PATH}/elasticsearch/plugins:/usr/share/elasticsearch/plugins:z
     ports:
