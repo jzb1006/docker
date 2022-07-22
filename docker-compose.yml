@@ -66,9 +66,9 @@ services:
       args:
         ELASTIC_VERSION: ${ELASTIC_VERSION}
     volumes:
-      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
-      - ./elasticsearch/data:/usr/share/elasticsearch/data:z
-      - ./elasticsearch/plugins:/usr/share/elasticsearch/plugins:z
+      - ${CONF_PATH}/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
+      - ${DATA_PATH}/elasticsearch/:/usr/share/elasticsearch/data:z
+      - ${CONF_PATH}/elasticsearch/plugins:/usr/share/elasticsearch/plugins:z
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -85,7 +85,7 @@ services:
       args:
         ELASTIC_VERSION: ${ELASTIC_VERSION}
     volumes:
-      - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro,Z
+      - ${CONF_PATH}/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml:ro,Z
     ports:
       - "5601:5601"
     networks:
@@ -124,9 +124,9 @@ services:
     volumes:
     # - ./standalone-logs/:/home/nacos/logs
     # - ./init.d/custom.properties:/home/nacos/init.d/custom.properties
-    - /app/webapp/logs/nacos/standalone-logs/:/home/nacos/logs
-    - /app/webapp/init.d/custom.properties:/home/nacos/init.d/custom.properties
-    - /app/webapp/nacos/conf/:/home/nacos/conf
+    - ${LOG_PATH}/nacos/standalone-logs/:/home/nacos/logs
+    - ${CONF_PATH}/nacos/custom.properties:/home/nacos/init.d/custom.properties
+    - ${CONF_PATH}/nacos/:/home/nacos/conf
     ports:
     - "8848:8848"
     - "9848:9848"
