@@ -125,7 +125,7 @@ services:
     # - ./standalone-logs/:/home/nacos/logs
     # - ./init.d/custom.properties:/home/nacos/init.d/custom.properties
     - ${LOG_PATH}/nacos/standalone-logs/:/home/nacos/logs
-    - ./nacos/conf/:/home/nacos/init.d/custom.properties
+    - ./nacos/conf/init.d/custom.properties:/home/nacos/init.d/custom.properties
     - ./nacos/conf/:/home/nacos/conf
     ports:
     - "8848:8848"
