@@ -55,7 +55,7 @@ services:
     restart: always
     stdin_open: true
     tty: true
-    entrypoint: ["redis-server", "/etc/redis.conf"]
+    entrypoint: [ "redis-server", "/etc/redis.conf" ]
     networks:
       - dcnmp
 
@@ -119,17 +119,17 @@ services:
     image: nacos/nacos-server:${NACOS_VERSION}
     container_name: nacos-standalone
     environment:
-    - PREFER_HOST_MODE=hostname
-    - MODE=standalone
+      - PREFER_HOST_MODE=hostname
+      - MODE=standalone
     volumes:
-    # - ./standalone-logs/:/home/nacos/logs
-    # - ./init.d/custom.properties:/home/nacos/init.d/custom.properties
-    - ${LOG_PATH}/nacos/standalone-logs/:/home/nacos/logs
-    - ./nacos/conf/init.d/custom.properties:/home/nacos/init.d/custom.properties
-    - ./nacos/conf/:/home/nacos/conf
+      # - ./standalone-logs/:/home/nacos/logs
+      # - ./init.d/custom.properties:/home/nacos/init.d/custom.properties
+      - ${LOG_PATH}/nacos/standalone-logs/:/home/nacos/logs
+      - ./nacos/conf/init.d/custom.properties:/home/nacos/init.d/custom.properties
+      - ./nacos/conf/:/home/nacos/conf
     ports:
-    - "8848:8848"
-    - "9848:9848"
+      - "8848:8848"
+      - "9848:9848"
     networks:
       - dcnmp
 
@@ -146,7 +146,7 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: "${RABBITMQ_DEFAULT_USER}"
       RABBITMQ_DEFAULT_PASS: "${RABBITMQ_DEFAULT_PASS}"
-      TZ: "${TZ}"
+      TZ: Asia/Shanghai
     volumes:
       - ${LOG_PATH}/rabbitmq:/var/log/rabbitmq:rw
       - ${DATA_PATH}/rabbitmq:/var/lib/rabbitmq:rw
@@ -156,6 +156,19 @@ services:
     restart: always
     networks:
       - dcnmp
+
+  sentinel:
+    image: matecloud/sentinel-dashboard:1.8.4
+    container_name: "sentinel-dashboard"
+    environment:
+      - TZ=Asia/Shanghai
+      - JAVA_OPTS= -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dsentinel.dashboard.auth.username=sentinel -Dsentinel.dashboard.auth.password=sentinel -Dserver.servlet.session.timeout=7200
+    ports:
+      - 8033:8080
+    restart: on-failure
+    networks:
+      - dcnmp
+
 
   # prometheus:
   #   container_name: prometheus
