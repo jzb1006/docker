@@ -164,7 +164,7 @@ services:
       - TZ=Asia/Shanghai
       - JAVA_OPTS= -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dsentinel.dashboard.auth.username=sentinel -Dsentinel.dashboard.auth.password=sentinel -Dserver.servlet.session.timeout=7200
     ports:
-      - 8033:8080
+      - "8034:8080"
     restart: on-failure
     networks:
       - dcnmp
