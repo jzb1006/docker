@@ -158,7 +158,7 @@ services:
       - dcnmp
 
   sentinel:
-    image: matecloud/sentinel-dashboard:1.8.4
+    image: bladex/sentinel-dashboard:latest
     container_name: "sentinel-dashboard"
     environment:
       - TZ=Asia/Shanghai
