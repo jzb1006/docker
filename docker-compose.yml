@@ -157,18 +157,6 @@ services:
     networks:
       - dcnmp
 
-  sentinel:
-    image: bladex/sentinel-dashboard:latest
-    container_name: "sentinel-dashboard"
-    environment:
-      - TZ=Asia/Shanghai
-      - JAVA_OPTS= -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dsentinel.dashboard.auth.username=sentinel -Dsentinel.dashboard.auth.password=sentinel -Dserver.servlet.session.timeout=7200
-    ports:
-      - "8034:8080"
-    restart: on-failure
-    networks:
-      - dcnmp
-
 
   # prometheus:
   #   container_name: prometheus
