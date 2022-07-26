@@ -158,16 +158,10 @@ services:
       - dcnmp
 
   zipkin:
-    image: openzipkin/zipkin-dependencies:latest
+    image: openzipkin/zipkin:latest
     container_name: zipkin
     ports:
       - 9411:9411
-    environment:
-      - ES_HOSTS=elasticsearch:9200
-      - STORAGE_TYPE=elasticsearch
-      - ES_INDEX=zipkin
-      - ZIPKIN_LOG_LEVEL=DEBUG
-      - JAVA_OPTS=-verbose:gc -Xms100 -Xmx100
     networks:
       - dcnmp
 
