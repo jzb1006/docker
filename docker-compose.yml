@@ -157,6 +157,21 @@ services:
     networks:
       - dcnmp
 
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    depends_on:
+      - elasticsearch
+    links:
+      - elasticsearch
+    restart: always
+    ports:
+      - 9411:9411
+    environment:
+      - TZ=Asia/Shanghai
+      - STORAGE_TYPE=elasticsearch
+      - ES_HOSTS=elasticsearch:9200
+
 
   # prometheus:
   #   container_name: prometheus
