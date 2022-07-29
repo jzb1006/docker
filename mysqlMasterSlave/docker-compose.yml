@@ -10,7 +10,7 @@ services:
     volumes:
       - /app/data/mysql/master/log:/var/log/mysql
       - /app/data/mysql/master/data:/var/lib/mysql
-      - /app/data/mysql/master/conf:/etc/mysql
+      - /app/data/mysql/master/conf:/etc/mysql/conf.d
     networks:
       - mysql-net
     ports:
@@ -24,7 +24,7 @@ services:
     volumes:
       - /app/data/mysql/slave/log:/var/log/mysql
       - /app/data/mysql/slave/data:/var/lib/mysql
-      - /app/data/mysql/slave/conf:/etc/mysql
+      - /app/data/mysql/slave/conf:/etc/mysql/conf.d
     depends_on:
       - mysql-master
     networks:
